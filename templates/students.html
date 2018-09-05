@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>学生信息</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>学号</th>
+        <th>邮箱</th>
+        <th>性别</th>
+    </tr>
+    {% for stu in stu_list %}
+        <tr>
+            <td>{{ stu.stu_id }}</td>
+            <td>{{ stu.stu_name }}</td>
+            <td>{{ stu.studetail.no }}</td>
+            <td>{{ stu.studetail.email }}</td>
+            <td>{{ stu.studetail.sex }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
